@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: trove.jar tika.jar stromberglabs-commons.jar restfb.jar lu
+ cene-core-3.5.0.jar lucene-core-3.3.0.jar lastfm.jar jsoup.jar json.j
+ ar jaws-bin.jar httpmime-4.2-beta1.jar httpcore-4.2-beta1.jar httpcli
+ ent-cache-4.2-beta1.jar httpclient-4.2-beta1.jar hsqldb.jar fluent-hc
+ -4.2-beta1.jar commons-math-2.2.jar commons-logging-1.1.1.jar commons
+ -codec-1.4.jar b.jar
+Created-By: 1.6.0 (Sun Microsystems Inc.)
+

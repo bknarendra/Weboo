@@ -1,0 +1,2038 @@
+Jun 12, 2012 5:14:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Jun 12, 2012 5:14:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Jun 12, 2012 5:14:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@19a0203')
+Jun 12, 2012 5:16:39 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /test/c.jsp
+Type mismatch: cannot convert from byte[] to byte
+56: }*/
+57: String uname=request.getParameter("name");
+58: {
+59: 	byte buf=new byte[1024];int len=0;
+60: 	try{
+61: 		DataInputStream din=new DataInputStream(new FileInputStream(new File(uname)));
+62: 		ServerSocket s=new ServerSocket(9000);
+
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 66 in the jsp file: /test/c.jsp
+The method write(byte[], int, int) in the type DataOutputStream is not applicable for the arguments (byte, int, int)
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /test/c.jsp
+Type mismatch: cannot convert from byte[] to byte
+56: }*/
+57: String uname=request.getParameter("name");
+58: {
+59: 	byte buf=new byte[1024];int len=0;
+60: 	try{
+61: 		DataInputStream din=new DataInputStream(new FileInputStream(new File(uname)));
+62: 		ServerSocket s=new ServerSocket(9000);
+
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 66 in the jsp file: /test/c.jsp
+The method write(byte[], int, int) in the type DataOutputStream is not applicable for the arguments (byte, int, int)
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:22 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:130)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:130)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:28 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.test.c_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:130)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 5:17:32 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /test/c.jsp
+in cannot be resolved
+62: 		ServerSocket s=new ServerSocket(9000);
+63: 		Socket soc=s.accept();
+64: 		DataOutputStream d=new DataOutputStream(soc.getOutputStream());
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+
+
+An error occurred at line: 68 in the jsp file: /test/c.jsp
+in cannot be resolved
+65: 		while((len=in.read(buf))!=-1){
+66: 			d.write(buf,0,len);
+67: 		}
+68: 		in.close();d.close();
+69: 	}
+70: 	catch(Exception e)
+71: 	{out.println("error");}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:24:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Jun 12, 2012 8:24:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Jun 12, 2012 8:24:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@e45b5e')
+Jun 12, 2012 8:24:57 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:25:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:25:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.html.search_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.html.search_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:130)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:25:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.html.search_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.html.search_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:130)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:25:28 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new FileInputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+FileInputStreamReader cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new FileInputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:26:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /html/search.jsp
+movie.json cannot be resolved to a type
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(movie.json)));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+music.json cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream(music.json)));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:26:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+The method elseif(boolean) is undefined for the type search_jsp
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 9 in the jsp file: /html/search.jsp
+Syntax error, insert ";" to complete Statement
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} elseif (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:27:08 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} else if (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 11 in the jsp file: /html/search.jsp
+BufferedReder cannot be resolved to a type
+8: 		out.println(s);
+9: 	} else if (request.getParameter("q").equals("music"))
+10: 	{
+11: 		BufferedReder br=new BufferedReader(new InputStreamReader(new FileInputStream("music.json")));
+12: 		String s1="",s="";
+13: 		while((s1=br.readLine())!=null) s+=s1;
+14: 		out.println(s);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:27:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 3
+
+1: <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,java.io.*,java.net.*"%>
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:68)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:27:21 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 3
+
+1: <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,java.io.*,java.net.*"%>
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:68)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:28:00 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:21 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:29:28 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [An exception occurred processing JSP page /html/search.jsp at line 5
+
+2: <%
+3: 	if (request.getParameter("q").equals("movie"))
+4: 	{
+5: 		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("movie.json")));
+6: 		String s1="",s="";
+7: 		while((s1=br.readLine())!=null) s+=s1;
+8: 		out.println(s);
+
+
+Stacktrace:] with root cause
+java.io.FileNotFoundException: movie.json (The system cannot find the file specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+	at org.apache.jsp.html.search_jsp._jspService(search_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Jun 12, 2012 8:34:20 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Jun 12, 2012 8:34:20 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()

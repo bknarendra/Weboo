@@ -1,0 +1,1 @@
+javac -cp "lib\a.jar;lib\b.jar;restfb.jar"; *.java

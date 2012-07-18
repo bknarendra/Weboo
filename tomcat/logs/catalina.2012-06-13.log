@@ -1,0 +1,268 @@
+Jun 13, 2012 6:19:52 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 6:19:52 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 6:19:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:19:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:19:55 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3752 ms
+Jun 13, 2012 6:19:55 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 6:19:55 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 6:19:55 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 6:19:56 AM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [125] milliseconds.
+Jun 13, 2012 6:19:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 6:19:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 6:19:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 6:19:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 6:19:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 6:19:59 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:19:59 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:19:59 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3536 ms
+Jun 13, 2012 6:20:22 AM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jun 13, 2012 6:20:22 AM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:28:56 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 13, 2012 6:28:56 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/weboo] appears to have started a thread named [HSQLDB Timer @1fa490e] but has failed to stop it. This is very likely to create a memory leak.
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:28:56 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:39:42 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 6:39:42 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 6:39:43 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:39:43 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:39:43 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 907 ms
+Jun 13, 2012 6:39:43 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 6:39:43 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 6:39:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 6:39:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 6:39:44 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 6:39:44 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 6:39:44 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 6:39:44 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 6:39:44 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 6:39:44 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 6:39:44 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1075 ms
+Jun 13, 2012 6:40:03 AM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jun 13, 2012 6:40:03 AM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jun 13, 2012 4:35:37 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 4:35:37 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 4:35:39 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 4:35:39 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 4:35:39 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3889 ms
+Jun 13, 2012 4:35:40 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 4:35:40 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 4:35:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 4:35:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 4:35:41 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 4:35:41 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 4:35:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 4:35:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 4:35:42 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 4:35:42 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 4:35:42 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2847 ms
+Jun 13, 2012 4:36:47 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jun 13, 2012 4:36:47 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 5:07:59 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 13, 2012 5:07:59 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/weboo] appears to have started a thread named [HSQLDB Timer @4e17f9] but has failed to stop it. This is very likely to create a memory leak.
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 5:07:59 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 8:36:31 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 8:36:31 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 8:36:36 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 8:36:36 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 8:36:36 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 5467 ms
+Jun 13, 2012 8:36:36 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 8:36:36 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 8:36:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 8:36:37 PM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [141] milliseconds.
+Jun 13, 2012 8:36:37 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 8:36:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 8:36:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 8:36:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 8:36:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 8:36:39 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 8:36:39 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 8:36:39 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3306 ms
+Jun 13, 2012 8:37:02 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jun 13, 2012 8:37:02 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jun 13, 2012 9:36:32 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 9:41:01 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 9:41:01 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 9:41:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 9:41:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 9:41:03 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3177 ms
+Jun 13, 2012 9:41:03 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 9:41:03 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 9:41:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 9:41:04 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 9:41:04 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 9:41:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 9:41:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 9:41:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 9:41:05 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 9:41:05 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 9:41:05 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1806 ms
+Jun 13, 2012 9:43:43 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jun 13, 2012 9:43:43 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 10:04:45 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 13, 2012 10:04:45 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/weboo] appears to have started a thread named [HSQLDB Timer @bdb375] but has failed to stop it. This is very likely to create a memory leak.
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 10:04:45 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 11:57:55 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Jun 13, 2012 11:57:55 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jun 13, 2012 11:58:04 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 11:58:04 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 11:58:04 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 20975 ms
+Jun 13, 2012 11:58:06 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 13, 2012 11:58:06 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Jun 13, 2012 11:58:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\docs
+Jun 13, 2012 11:58:10 PM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,188] milliseconds.
+Jun 13, 2012 11:58:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\examples
+Jun 13, 2012 11:58:13 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\host-manager
+Jun 13, 2012 11:58:14 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\manager
+Jun 13, 2012 11:58:14 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\ROOT
+Jun 13, 2012 11:58:14 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Documents and Settings\Rajesh Basrur\Desktop\final project\tomcat\webapps\weboo
+Jun 13, 2012 11:58:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Jun 13, 2012 11:58:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 13, 2012 11:58:21 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 16866 ms

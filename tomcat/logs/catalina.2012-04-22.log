@@ -1,0 +1,82 @@
+Apr 22, 2012 8:23:30 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Apr 22, 2012 8:23:31 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Apr 22, 2012 8:23:33 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 8:23:34 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 8:23:34 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 4928 ms
+Apr 22, 2012 8:23:34 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 22, 2012 8:23:34 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Apr 22, 2012 8:23:34 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\ROOT
+Apr 22, 2012 8:23:37 PM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [218] milliseconds.
+Apr 22, 2012 8:23:37 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\manager
+Apr 22, 2012 8:23:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\host-manager
+Apr 22, 2012 8:23:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\examples
+Apr 22, 2012 8:23:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\docs
+Apr 22, 2012 8:23:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\apache-tomcat-7.0.27\webapps\weboo
+Apr 22, 2012 8:23:45 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 8:23:45 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 8:23:45 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 11863 ms
+Apr 22, 2012 8:33:28 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 8:33:28 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 8:33:28 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 22, 2012 8:33:29 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 8:33:29 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 8:33:29 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 8:33:29 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 10:18:37 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.23.
+Apr 22, 2012 10:18:37 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Apr 22, 2012 10:18:40 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 10:18:40 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 10:18:40 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 4009 ms
+Apr 22, 2012 10:18:40 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 22, 2012 10:18:40 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.27
+Apr 22, 2012 10:18:41 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\ROOT
+Apr 22, 2012 10:18:43 PM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [156] milliseconds.
+Apr 22, 2012 10:18:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\manager
+Apr 22, 2012 10:18:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\host-manager
+Apr 22, 2012 10:18:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\examples
+Apr 22, 2012 10:18:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\docs
+Apr 22, 2012 10:18:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\project\tomcat\webapps\weboo
+Apr 22, 2012 10:18:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Apr 22, 2012 10:18:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Apr 22, 2012 10:18:48 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 7656 ms

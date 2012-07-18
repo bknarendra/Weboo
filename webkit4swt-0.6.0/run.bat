@@ -1,0 +1,1 @@
+java -Djava.library.path=C:\WINDOWS -cp "lib\a.jar;lib\b.jar;restfb.jar"; SWTWebKitBrowser

@@ -1,0 +1,314 @@
+Apr 23, 2012 12:01:32 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Apr 23, 2012 12:01:32 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Apr 23, 2012 12:02:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Apr 23, 2012 12:02:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Apr 23, 2012 12:02:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@1474e45')
+Apr 23, 2012 12:04:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Apr 23, 2012 12:04:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Apr 23, 2012 12:04:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Apr 23, 2012 12:04:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Apr 23, 2012 12:04:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@1d840cd')
+Apr 23, 2012 1:47:04 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /reg.jsp
+Syntax error on token "if", delete this token
+10: String uname=request.getParameter("name");
+11: String passwd=request.getParameter("pwd");
+12: String accesstoken=request.getParameter("access_token");
+13: if 
+14: {
+15: 	try{
+16: 		accesstoken=accesstoken.substring(accesstoken.indexOf("access_token=")+13,accesstoken.indexOf("&expires_in="));
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /reg.jsp
+Syntax error on token "if", delete this token
+10: String uname=request.getParameter("name");
+11: String passwd=request.getParameter("pwd");
+12: String accesstoken=request.getParameter("access_token");
+13: if 
+14: {
+15: 	try{
+16: 		accesstoken=accesstoken.substring(accesstoken.indexOf("access_token=")+13,accesstoken.indexOf("&expires_in="));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Apr 23, 2012 1:53:39 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /reg.jsp
+Syntax error on token "else", delete this token
+34: 					accesstoken=temp1.substring(temp1.indexOf("access_token=")+13,temp1.indexOf("&expires_in="));
+35: 				}
+36: 				System.out.println(accesstoken);
+37: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+38: 			}catch(Exception e){accesstoken="";out.println("error");}
+39: 		try {
+40: System.out.println("db");
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /reg.jsp
+Syntax error on token "else", delete this token
+34: 					accesstoken=temp1.substring(temp1.indexOf("access_token=")+13,temp1.indexOf("&expires_in="));
+35: 				}
+36: 				System.out.println(accesstoken);
+37: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+38: 			}catch(Exception e){accesstoken="";out.println("error");}
+39: 		try {
+40: System.out.println("db");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Apr 23, 2012 1:58:37 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "Finally" to complete TryStatement
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "}" to complete Block
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "Finally" to complete BlockStatements
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 140 in the generated java file
+Syntax error on token "}", delete this token
+
+An error occurred at line: 141 in the generated java file
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "Finally" to complete TryStatement
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "}" to complete Block
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 41 in the jsp file: /reg.jsp
+Syntax error, insert "Finally" to complete BlockStatements
+38: 					System.out.println(accesstoken);
+39: 				}
+40: 				else {System.out.println("error occurred");accesstoken="";out.println("error");}
+41: 			}catch(Exception e){accesstoken="";out.println("error");}
+42: 	/*	try {
+43: System.out.println("db");
+44: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+
+
+An error occurred at line: 140 in the generated java file
+Syntax error on token "}", delete this token
+
+An error occurred at line: 141 in the generated java file
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Apr 23, 2012 5:12:40 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/weboo] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 18 in the jsp file: /check.jsp
+con cannot be resolved
+15: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+16: 		} catch (Exception e) {System.err.println("ERROR: failed to load HSQLDB JDBC driver.");e.printStackTrace();return;}
+17: 		Connection conn=DriverManager.getConnection("jdbc:hsqldb:file:proj.db", "SA", "");
+18: 		Statement st=con.createStatement();
+19: 		ResultSet rs=st.executeQuery("select * from user where username='"+name+"'");
+20: 		if(rs.next()){
+21: 			String accesstoken=rs.getString(3);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 18 in the jsp file: /check.jsp
+con cannot be resolved
+15: 			Class.forName("org.hsqldb.jdbc.JDBCDriver" );
+16: 		} catch (Exception e) {System.err.println("ERROR: failed to load HSQLDB JDBC driver.");e.printStackTrace();return;}
+17: 		Connection conn=DriverManager.getConnection("jdbc:hsqldb:file:proj.db", "SA", "");
+18: 		Statement st=con.createStatement();
+19: 		ResultSet rs=st.executeQuery("select * from user where username='"+name+"'");
+20: 		if(rs.next()){
+21: 			String accesstoken=rs.getString(3);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:927)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1812)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Apr 23, 2012 5:57:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Apr 23, 2012 5:57:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Apr 23, 2012 10:35:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Apr 23, 2012 10:35:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Apr 23, 2012 10:35:31 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@e45b5e')
+Apr 23, 2012 11:10:18 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Apr 23, 2012 11:10:18 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
